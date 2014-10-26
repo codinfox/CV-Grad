@@ -124,6 +124,25 @@
 }
 
 %----------------------------------------------------------------------------------------
+%	PROJECT FORMATTING
+%----------------------------------------------------------------------------------------
+
+\newenvironment{pSubsection}[5]{ % 5 input arguments - project name, location, role, time and comment
+ {\bf #1} \hfill {\bf #2} % Bold school name and location on the right 
+ \\
+ {\em #5} \hfill {\em #4} % Italic degree line
+ \ifthenelse{\equal{#3}{}}{}{ % If the fifth argument is not specified, don't print the line
+   \\
+   {\em #3}
+  }\smallskip
+  \begin{list}{\textbullet}{\leftmargin=1.5em} % \cdot used for bullets, no indentation
+   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+  }{
+  \end{list}
+  \vspace{0.5em} % Some space after the list of bullet points
+}
+
+%----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
 
